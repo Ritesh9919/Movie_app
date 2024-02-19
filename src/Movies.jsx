@@ -1,10 +1,19 @@
 import React from 'react'
+import {useMovies} from './context'
 
 function Movies() {
+  const {movies} = useMovies()
+  console.log(movies)
+
+  
   return (
-    <div>
-      <h1>Movies</h1>
-    </div>
+    <>
+      {movies.map((movie)=> 
+      <div key={movie.imdbID}>
+       <p>{movie.Title}</p>
+       </div>
+      )}
+    </>
   )
 }
 
