@@ -7,6 +7,7 @@ const imgUrl = "https://via.placeholder.com/200/200";
 function Movies() {
   const {movies,loading} = useMovies()
   
+  
 
 
   if(loading) {
@@ -17,8 +18,8 @@ function Movies() {
     <>
     <section className="movie-page">
         <div className="container grid grid-4-col">
-          {movies
-            ? movies.map((movie) => {
+          {movies.Search
+            ? movies.Search.map((movie) => {
                 const { imdbID, Title, Poster } = movie;
                 const movieName = Title.substring(0, 15);
 
