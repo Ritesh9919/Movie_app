@@ -25,8 +25,10 @@ const useFetch = (apiParams) => {
         toast.success("Movies fetched successfully");
       }
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.data.message);
       throw Error(error.message);
+    }finally{
+      setLoading(false)
     }
   };
 
