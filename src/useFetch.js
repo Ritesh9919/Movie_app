@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
-const apiUrl = `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}`;
+const apiUrl = `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_API_KEY}`;
 
 const useFetch = (apiParams) => {
   const [movies, setMovies] = useState([]);
