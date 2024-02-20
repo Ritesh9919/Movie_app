@@ -9,7 +9,7 @@ const useFetch = (apiParams) => {
   const [loading, setLoading] = useState(true);
 
   const getMovies = async (url) => {
-    console.log(url);
+    
     try {
       setLoading(true);
       const response = await axios.get(url);
@@ -25,7 +25,7 @@ const useFetch = (apiParams) => {
         toast.success("Movies fetched successfully");
       }
     } catch (error) {
-      toast.error(error.data.message);
+      toast.error(error.message);
       throw Error(error.message);
     }finally{
       setLoading(false)
